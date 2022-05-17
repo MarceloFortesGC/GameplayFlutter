@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:gameplay_flutter/src/features/login/components/login_hero.dart';
 
 class LoginWidget extends StatefulWidget {
   const LoginWidget({required Key key}) : super(key: key);
@@ -26,25 +27,8 @@ class _LoginWidgetState extends State<LoginWidget> {
               color: Color(0x00FF2121),
             ),
             child: Column(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: Image.asset(
-                        'assets/images/background.png',
-                      ).image,
-                    ),
-                  ),
-                  child: Image.asset(
-                    'assets/images/character.png',
-                    width: MediaQuery.of(context).size.width,
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                const LoginHero(),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.8,
                   decoration: const BoxDecoration(
@@ -56,15 +40,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                       const Divider(
                         height: 32,
                       ),
-                      const Text(
-                        'Conecte-se e organize suas jogatinas',
-                        textAlign: TextAlign.center,
-                        style: TextStyle (
-                          color: Colors.white,
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        )
-                      ),
+                      const Text('Conecte-se e organize suas jogatinas',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          )),
                       const Divider(
                         height: 16,
                       ),
@@ -72,8 +54,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                         'Crie grupos para jogar seus games favoritos com seus amigos',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                              color: Colors.white,
-                            ),
+                          color: Colors.white,
+                        ),
                       ),
                       const Divider(
                         height: 32,
@@ -91,8 +73,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                           children: const [
                             FaIcon(
                               FontAwesomeIcons.discord,
-                              color:
-                                  Colors.white,
+                              color: Colors.white,
                               size: 24,
                             ),
                             Padding(
@@ -101,10 +82,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                               child: Text(
                                 'Entrar com Discord',
                                 style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.normal,
-                                    ),
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.normal,
+                                ),
                               ),
                             ),
                           ],
